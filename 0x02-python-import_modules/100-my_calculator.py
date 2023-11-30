@@ -14,6 +14,7 @@ def calc(a, op, b):
     elif op == '/':
         print("{} {} {} = {}".format(a, op, b, div(a, b)))
 
+
 op = ['+', '-', '*', '/']
 
 arg_count = len(sys.argv) - 1
