@@ -3,7 +3,7 @@
 def print_matrix_integer(matrix=[[]]):
     if len(matrix) == 0 or all(not row for row in matrix):
         print()
-
+        return matrix
     row = len(matrix)
     column = len(matrix[0])
     for i in range(row):
