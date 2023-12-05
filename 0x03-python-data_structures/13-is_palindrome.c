@@ -17,9 +17,14 @@ int is_palindrome(listint_t **head)
 
 	if (head == NULL || *head == NULL)
 		return (1);
+
+	if ((*head)->next == NULL)
+		return (1);
+
 	rev_list = *head;
 	prev = NULL;
 	current = rev_list;
+
 	while (current != NULL)
 	{
 		next = current->next;
@@ -34,10 +39,26 @@ int is_palindrome(listint_t **head)
 	while (current != NULL)
 	{
 		if (current->n != rev_list->n)
+		{
+			while (rev_list != NULL)
+			{
+				next = rev_list->next;
+				free(rev_list);
+				rev_list = next;
+			}
 			return (0);
+		}
 		current = current->next;
 		rev_list = rev_list->next;
 	}
+
+	while (rev_list != NULL)
+	{
+		next = rev_list->next;
+		free(rev_list);
+		rev_list = next;
+	}
+
 
 	return (1);
 }
