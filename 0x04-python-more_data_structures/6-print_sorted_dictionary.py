@@ -6,4 +6,4 @@ def print_sorted_dictionary(a_dictionary):
         new_list.append(i)
     new_list.sort()
     for i in new_list:
-        print(i, ":", a_dictionary[i])
+        print(i,":", a_dictionary[i])
