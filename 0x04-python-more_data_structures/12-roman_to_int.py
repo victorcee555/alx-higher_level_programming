@@ -22,7 +22,7 @@ def numeral_value(list_string):
         else:
             list_values = 0
         index += 1
-    
+
     if len(list_values) > 1:
         for i in range(1, len(list_values)):
             if list_values[i - 1] < list_values[i]:
