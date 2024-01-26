@@ -22,11 +22,12 @@ def numeral_value(list_string):
         else:
             list_values = 0
         index += 1
-
+    
     if len(list_values) > 1:
-        if list_values[0] < list_values[1]:
-            list_values[1] = list_values[1] - list_values[0]
-            list_values[0] = 0
+        for i in range(1, len(list_values)):
+            if list_values[i - 1] < list_values[i]:
+                list_values[i] = list_values[i] - list_values[i - 1]
+                list_values[i - 1] = 0
     return list_values
 
 
@@ -34,10 +35,10 @@ def roman_to_int(roman_string):
     I, V, X, L, C, D, M = 1, 5, 10, 50, 100, 500, 1000
     list_str = []
     value = 0
-    
-    if isinstance(roman_string, str) != True:
+
+    if isinstance(roman_string, str) is not True:
         return 0
-    if len(roman_string) != 0 or roman_string != None:
+    if len(roman_string) != 0 or roman_string is not None:
         for i in roman_string:
             list_str.append(i)
 
