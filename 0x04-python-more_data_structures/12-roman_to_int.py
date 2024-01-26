@@ -28,6 +28,8 @@ def numeral_value(list_string):
             list_values[1] = list_values[1] - list_values[0]
             list_values[0] = 0
     return list_values
+
+
 def roman_to_int(roman_string):
     I, V, X, L, C, D, M = 1, 5, 10, 50, 100, 500, 1000
     list_str = []
