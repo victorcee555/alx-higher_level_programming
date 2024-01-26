@@ -35,7 +35,8 @@ def roman_to_int(roman_string):
     list_str = []
     value = 0
     
-
+    if isinstance(roman_string, str) != True:
+        return 0
     if len(roman_string) != 0 or roman_string != None:
         for i in roman_string:
             list_str.append(i)
