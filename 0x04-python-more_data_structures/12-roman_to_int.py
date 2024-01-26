@@ -34,6 +34,7 @@ def roman_to_int(roman_string):
     I, V, X, L, C, D, M = 1, 5, 10, 50, 100, 500, 1000
     list_str = []
     value = 0
+    
 
     if len(roman_string) != 0 or roman_string != None:
         for i in roman_string:
@@ -42,4 +43,4 @@ def roman_to_int(roman_string):
         value = sum(numeral_value(list_str))
         return value
     else:
-        return None
+        return 0
